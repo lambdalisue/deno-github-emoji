@@ -51,7 +51,7 @@ let regexCache: RegExp | undefined;
 export function emojify(text: string): string {
   if (!regexCache) {
     regexCache = new RegExp(
-      names().map((n) => `:${n}:`).join("|"),
+      names().map((n) => `:${escapeRegExp(n)}:`).join("|"),
       "g",
     );
   }
@@ -59,4 +59,8 @@ export function emojify(text: string): string {
     regexCache,
     (m) => emojiOf(m.slice(1, -1) as EmojiName) || m,
   );
+}
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
