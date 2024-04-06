@@ -1,13 +1,18 @@
 {
-  "lock": false,
+  "name": "@lambdalisue/github-emoji",
+  "version": "0.0.0",
+  "exports": "./mod.ts",
   "fmt": {
     "exclude": [
       "emojis.json"
     ]
   },
   "tasks": {
-    "test": "deno test --unstable -A --parallel --doc",
-    "check": "deno check --unstable $(find . -name '*.ts')",
-    "upgrade": "deno run -A https://deno.land/x/udd/main.ts $(find . -name '*.ts' -not -path '*/npm/*')"
+    "test": "deno test -A --parallel --doc --shuffle",
+    "check": "deno check **/*.ts"
+  },
+  "imports": {
+    "@std/path": "jsr:@std/path@^0.221.0",
+    "https://deno.land/x/github_emoji@$MODULE_VERSION/": "./"
   }
 }

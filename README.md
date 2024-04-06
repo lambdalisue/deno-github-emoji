@@ -1,19 +1,18 @@
 # github-emoji
 
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/github_emoji)
+[![jsr](https://img.shields.io/jsr/v/%40lambdalisue/github-emoji?logo=javascript&logoColor=white)](https://jsr.io/@lambdalisue/github-emoji)
+[![denoland](https://img.shields.io/github/v/release/lambdalisue/deno-github-emoji?logo=deno&label=denoland)](https://github.com/lambdalisue/deno-github-emoji/releases)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/github_emoji/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-github-emoji/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-github-emoji/actions?query=workflow%3ATest)
 
-GitHub emoji library for [deno][deno].
-
-[deno]: https://deno.land/
+GitHub emoji library for TypeScript.
 
 ## Usage
 
 Get a emoji string of a name (e.g. `smile`), use `emojiOf` function like:
 
 ```typescript
-import { emojiOf } from "./mod.ts";
+import { emojiOf } from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojiOf("smile"));
 // -> ☺️
@@ -23,7 +22,10 @@ The `emojiOf` require `EmojiName` instead of `string` so invalid emoji name
 become TypeScript error.
 
 ```typescript
-import { EmojiName, emojiOf } from "./mod.ts";
+import {
+  EmojiName,
+  emojiOf,
+} from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojiOf("smile")); // OK
 //console.log(emojiOf("this-is-not-valid-emoji-name")); // TypeScript error
@@ -34,7 +36,7 @@ Replace all valid `:{name}:` like strings (e.g. `:smile:`) in a text with emoji
 strings, use `emojify` function like:
 
 ```typescript
-import { emojify } from "./mod.ts";
+import { emojify } from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojify("Hello :world: :smile:")); // :world: is not valid emoji
 // -> Hello :world: ☺️
