@@ -1,4 +1,7 @@
 {
+  "name": "@lambdalisue/github-emoji",
+  "version": "0.0.0",
+  "exports": "./mod.ts",
   "fmt": {
     "exclude": [
       "emojis.json"

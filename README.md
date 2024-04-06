@@ -1,12 +1,11 @@
 # github-emoji
 
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/github_emoji)
+[![jsr](https://img.shields.io/jsr/v/%40lambdalisue/github-emoji?logo=javascript&logoColor=white)](https://jsr.io/@lambdalisue/github-emoji)
+[![denoland](https://img.shields.io/github/v/release/lambdalisue/deno-github-emoji?logo=deno&label=denoland)](https://github.com/lambdalisue/deno-github-emoji/releases)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/github_emoji/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-github-emoji/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-github-emoji/actions?query=workflow%3ATest)
 
-GitHub emoji library for [deno][deno].
-
-[deno]: https://deno.land/
+GitHub emoji library for TypeScript.
 
 ## Usage
 
