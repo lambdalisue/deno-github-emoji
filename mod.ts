@@ -1,5 +1,5 @@
-import records from "./emojis.json" assert { type: "json" };
-import { basename } from "https://deno.land/std@0.192.0/path/mod.ts";
+import records from "./emojis.json" with { type: "json" };
+import { basename } from "@std/path";
 
 const reHex = /^[0-9a-f-]+$/i;
 const emojiCache = new Map<EmojiName, string | undefined>();

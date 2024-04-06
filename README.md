@@ -13,7 +13,7 @@ GitHub emoji library for [deno][deno].
 Get a emoji string of a name (e.g. `smile`), use `emojiOf` function like:
 
 ```typescript
-import { emojiOf } from "./mod.ts";
+import { emojiOf } from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojiOf("smile"));
 // -> ☺️
@@ -23,7 +23,10 @@ The `emojiOf` require `EmojiName` instead of `string` so invalid emoji name
 become TypeScript error.
 
 ```typescript
-import { EmojiName, emojiOf } from "./mod.ts";
+import {
+  EmojiName,
+  emojiOf,
+} from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojiOf("smile")); // OK
 //console.log(emojiOf("this-is-not-valid-emoji-name")); // TypeScript error
@@ -34,7 +37,7 @@ Replace all valid `:{name}:` like strings (e.g. `:smile:`) in a text with emoji
 strings, use `emojify` function like:
 
 ```typescript
-import { emojify } from "./mod.ts";
+import { emojify } from "https://deno.land/x/github_emoji@$MODULE_VERSION/mod.ts";
 
 console.log(emojify("Hello :world: :smile:")); // :world: is not valid emoji
 // -> Hello :world: ☺️
