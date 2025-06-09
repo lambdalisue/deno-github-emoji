@@ -8,6 +8,7 @@
     ]
   },
   "tasks": {
+    "gen": "deno run -A ./scripts/collect-emojis.ts",
     "test": "deno test -A --parallel --doc --shuffle",
     "check": "deno check **/*.ts"
   },
